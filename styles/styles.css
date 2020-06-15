@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  color: #212121;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  height: 70px;
+}
+
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: #212121;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  /* padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; */
+}
+
+.navbar-brand img {
+  width: 100px;
+}
+
+.flex-container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-text {
+  max-width: 450px;
+}
+
+.home-image {
+  max-width: 370px;
+}
+
+.header-text {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  height: 250px;
+}
+
+.card-feature {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-feature-img {
+  max-width: 80px;
+}
+
+.card-feature p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.pl-2 {
+  padding-left: 1rem;
+}
+
+.primary {
+  color: #00c4cc !important;
+}
+
+.text-danger {
+  color: #e83493 !important;
+}
+
+.secondary {
+  color: #4b0ccf !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* @media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+} */
