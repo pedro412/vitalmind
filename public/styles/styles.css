@@ -60,6 +60,12 @@ button {
   color: #212121;
 }
 
+.comenzar {
+  background: #e83493;
+  color: #fff;
+  border-radius: 50px;
+}
+
 .container {
   width: 100%;
   position: relative;
@@ -259,6 +265,32 @@ button {
 
 .precio-precio span {
   font-size: 1rem;
+}
+
+footer {
+  padding-top: 20px;
+  background-color: #4b0ccf;
+  color: #fff;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.terms {
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 /* @media only screen and (min-width: 1200px) {
