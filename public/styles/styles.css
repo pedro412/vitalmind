@@ -5,11 +5,12 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   color: #212121;
 }
 
-h2 {
+h2,
+h3 {
   margin-bottom: 1rem;
 }
 
@@ -23,7 +24,7 @@ button {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -33,6 +34,11 @@ button {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  height: 74px;
+  box-shadow: -14px -3px 3px 2px #797979;
 }
 
 .navbar-nav {
@@ -43,6 +49,7 @@ button {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  margin-right: 50px;
 }
 
 .nav-link {
@@ -56,6 +63,7 @@ button {
 .container {
   width: 100%;
   position: relative;
+  padding-top: 90px;
 }
 
 .button-home {
@@ -74,7 +82,7 @@ button {
 }
 
 .flex-container {
-  height: 550px;
+  height: 500px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -102,9 +110,10 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-width: 1140px;
   margin: auto;
-  height: 250px;
+  height: 200px;
+  margin-bottom: 40px;
+  background-color: #f7f7f7;
 }
 
 .card-feature {
@@ -125,6 +134,7 @@ button {
 .card-feature p {
   font-size: 1.1rem;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 .img-fluid {
@@ -150,6 +160,40 @@ button {
 
 .text-center {
   text-align: center;
+}
+
+.pasos-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pasos-text {
+  max-width: 600px;
+}
+
+.pasos-img {
+  margin-right: 100px;
+}
+
+.paso {
+  cursor: pointer;
+  position: relative;
+  transition: ease-in 0.2s;
+}
+
+.paso h3 {
+  margin-bottom: 5px;
+}
+
+.paso div {
+  background-color: #00c4cc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  top: -11px;
+  left: -19px;
+  z-index: -1;
 }
 
 /* @media only screen and (min-width: 1200px) {

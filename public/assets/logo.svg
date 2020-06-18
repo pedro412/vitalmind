@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 300 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1.24442,0,0,1.24442,-32.1038,-10.3903)">
-        <g transform="matrix(1,0,0,1,-23.6862,25.4586)">
-            <text x="94.62px" y="39.644px" style="font-family:'Calibri', sans-serif;font-size:72px;fill:rgb(0,196,204);">VIT<tspan x="183.073px 224.733px " y="39.644px 39.644px ">AL</tspan></text>
+    <g transform="matrix(1.24442,0,0,1.24442,-29.5945,-7.9746)">
+        <g transform="matrix(1,0,0,1,-27.3312,25.4586)">
+            <text x="74.148px" y="39.644px" style="font-family:'ArialMT-Bold', 'Arial MT', sans-serif;font-weight:700;font-size:71.519px;fill:rgb(0,196,204);">VIT<tspan x="180.139px 231.776px " y="39.644px 39.644px ">AL</tspan></text>
         </g>
-        <g transform="matrix(1,0,0,1,-20.821,83.1019)">
-            <text x="84.196px" y="39.644px" style="font-family:'Calibri', sans-serif;font-size:72px;fill:rgb(0,196,204);">MIND</text>
+        <g transform="matrix(1,0,0,1,-23.9548,83.5069)">
+            <text x="78.067px" y="39.644px" style="font-family:'ArialMT-Bold', 'Arial MT', sans-serif;font-weight:700;font-size:71.519px;fill:rgb(0,196,204);">MIND</text>
         </g>
-        <g transform="matrix(1,0,0,1,32.4505,3.66667)">
+        <g transform="matrix(1,0,0,1,28.4176,3.66667)">
             <text x="15.756px" y="155.545px" style="font-family:'Calibri-Bold', 'Calibri', sans-serif;font-weight:700;font-size:38px;fill:rgb(226,50,149);">PSIC<tspan x="83.907px 109.606px 125.006px 150.704px " y="155.545px 155.545px 155.545px 155.545px ">ÓLOG</tspan>OS</text>
         </g>
     </g>
