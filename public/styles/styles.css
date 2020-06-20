@@ -293,6 +293,38 @@ footer {
   text-align: center;
 }
 
+#cuestionario {
+  position: relative;
+}
+
+.form {
+  max-width: 900px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-control label {
+  margin-left: 10px;
+}
+
+.pregunta {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  pointer-events: none;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+
 /* @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;

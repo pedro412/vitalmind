@@ -1,0 +1,58 @@
+const formArray = [
+  {
+    name: '¿Cuál es tu género?',
+    model: 'genero',
+    type: 'radio',
+    answers: ['Femenino', 'Masculino', 'Transgenero', 'Otro'],
+  },
+  {
+    name: '¿Qué edad tienes?',
+    type: 'select',
+    model: 'edad',
+    answers: [
+      '18',
+      '19',
+      '20',
+      '21',
+      '22',
+      '23',
+      '24',
+      '25',
+      '26',
+      '27',
+      '28',
+      '29',
+      '30',
+    ],
+  },
+  {
+    name: '¿Cuál es tu orientación?',
+    type: 'radio',
+    model: 'orientacion',
+    answers: ['Gay', 'Bisexual', 'Otro'],
+  },
+  {
+    name: '¿Cuál es tu  situación sentimental?',
+    type: 'radio',
+    mode: 'estado',
+    answers: ['Soltera', 'Casada', 'Divorciada', 'Viuda', 'Otro'],
+  },
+  {
+    name: '¿Has tomado terapia antes?',
+    type: 'radio',
+    model: 'terapia',
+    answers: ['Si', 'No'],
+  },
+  {
+    name: '¿Como consideras que es tu salud?',
+    type: 'radio',
+    model: 'salud',
+    answers: ['Buena', 'Regular', 'Mala'],
+  },
+  {
+    name: '¿Recientemente has experimentado alguno de estos sentimientos?',
+    model: 'sentiemientos',
+    type: 'checkbox',
+    answers: ['Trsiteza', 'Depresión', 'Ansiedad'],
+  },
+];
