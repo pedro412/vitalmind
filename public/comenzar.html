@@ -6,60 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vital Mind</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./styles/styles.css" />
     <!-- production version, optimized for size and speed -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <a class="navbar-brand" href="./">
-            <img style="width: 110px;" src="./assets/logo.svg" alt="vital mind" />
+            <img class="img-fluid" src="./assets/logo.svg" alt="Vital Mind">
         </a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">¿Por qué VM?</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cómo funciona</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Precios y Planes</a>
-            </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">¿Por qué VM?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cómo funciona</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Precios y planes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link comenzar-link" href="./comenzar.html">Comenzar</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <main class="container">
-        <div class="form">
-            <h2>Ayudanos a encontrar el mejor psicológo especial para ti</h2>
-            <p>Porfavor responde este breve cuestionario privado y anonimo para conocer como te podemos ayudar a mejorar
-                tu vida</p>
 
-            <div id="app">
-                <form>
-                    <div v-for="(question, index) in questions" class="form-group">
-                        <h3 for="">{{index + 1}} {{question.name}}</h3>
+    <main class="main">
 
-                        <div v-if="question.type === 'radio'" v-for="answer in question.answers" class="form-check">
-                            <input v-model="question.model" class="form-check-input" type="radio"
-                                :name="answer + '_' + question.name" :id="answer + '_' + question.name" :value="answer"
-                                @change="onChange($event, question.name)">
-                            <label class="form-check-label" :for="answer + '_' + question.name">
-                                {{answer}}
-                            </label>
+        <div class="section">
+            <div class="container mt-5">
+                <div>
+                    <h2>Ayudanos a encontrar el mejor psicológo especial para ti</h2>
+                    <p>Porfavor responde este breve cuestionario privado y anonimo para conocer como te podemos ayudar a
+                        mejorar
+                        tu vida</p>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div id="app">
+                            <form>
+                                <div v-for="(question, index) in questions" class="form-group">
+
+                                    <transition name="fade">
+                                        <div v-show="currentQuestion === index + 1">
+                                            <h3 for="">{{index + 1}} {{question.name}}</h3>
+                                            <div v-if="question.type === 'radio'" v-for="answer in question.answers"
+                                                class="form-check">
+                                                <input v-model="question.model" class="form-check-input" type="radio"
+                                                    :name="answer + '_' + question.name"
+                                                    :id="answer + '_' + question.name" :value="answer"
+                                                    @change="onChange($event, question.name)">
+                                                <label class="form-check-label" :for="answer + '_' + question.name">
+                                                    {{answer}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </transition>
+
+                                    <transition name="fade">
+                                        <div v-show="currentQuestion === index + 1">
+                                            <div v-if="question.type === 'select'" class="form-group">
+                                                <label :for="question.name">Selecciona: </label>
+                                                <select @change="onChange($event, question.name)" class="form-control"
+                                                    :id="question.name">
+                                                    <option v-for="answer in question.answers">{{answer}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </transition>
+
+                                    <transition name="fade">
+                                        <div v-show="currentQuestion === index + 1">
+                                            <div v-if="question.type === 'checkbox'" v-for="answer in question.answers"
+                                                class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" :id="answer">
+                                                <label class="form-check-label" :for="answer">
+                                                    {{answer}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </transition>
+
+                                </div>
+
+                                <div>
+                                    <button class="btn btn-secondary" v-if="currentQuestion > 1" type="button"
+                                        v-on:click="currentQuestion -= 1">
+                                        Anterior
+                                    </button>
+
+                                    <button class="btn btn-primary" type="button" v-on:click="currentQuestion += 1">
+                                        Siguiente
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-
-                        <div v-if="question.type === 'select'" class="form-group">
-                            <label :for="question.name">Selecciona: </label>
-                            <select @change="onChange($event, question.name)" class="form-control" :id="question.name">
-                                <option v-for="answer in question.answers">{{answer}}</option>
-                            </select>
-                        </div>
-
                     </div>
-                </form>
+                    <div class="col-md">
+                        <img class="img-fluid" src="./assets/mujer.png" alt="mujer">
+                    </div>
+                </div>
             </div>
-
         </div>
     </main>
 

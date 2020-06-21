@@ -6,90 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vital Mind</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <a class="navbar-brand" href="#">
-            <img style="width: 110px;" src="./assets/logo.svg" alt="vital mind" />
+            <img class="img-fluid" src="./assets/logo.svg" alt="Vital Mind">
         </a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">¿Por qué VM?</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cómo funciona</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Precios y Planes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link comenzar" href="comenzar.html">Comenzar</a>
-            </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">¿Por qué VM?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cómo funciona</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Precios y planes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link comenzar-link" href="./comenzar.html">Comenzar</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <main class="container">
-        <section style="background-color: #f8f4ff;" class="flex-container">
-            <div class="home-text">
-                <h2 class="header-text text-danger">Apoyo psicológico que se adapta a ti</h2>
-                <p>
-                    En vital Mind somos un equipo de psicólogos capacitados y
-                    certificados, en donde ofrecemos apoyo personalizado a las mujeres
-                    que día a día se enfrenta a distintas limitantes que nos les
-                    permiten ser su mejor versión.
-                </p>
-                <button class="button-home" type="button">Comenzar</button>
-            </div>
-            <div style="background-color: #ffffff;
-            border-radius: 60%;">
-                <img class="img-fluid" src="./assets/amigos.png" alt="amigos">
-            </div>
-        </section>
-
-        <section class="flex-container">
-            <div class="home-text">
-                <h2 class="header-text secondary">Psicólogos profesionales
-                    apalancados por tecnología
-                </h2>
-                <p>
-                    Ofrecemos un programa de tratamiento
-                    integral que combiana técnología con
-                    asesoria profesional.
-                    Te damos acceso a un lugar para crear
-                    conexiones y una comunidad segura y sin
-                    prejuicios que promueve el intercambio de
-                    experiencias e ideas, empatía, comprensión y
-                    la esperanza de construir la vida que deseas vivir.
-                </p>
-            </div>
-            <div class="porque-img">
-                <img class="img-fluid" src="./assets/tablets.png" alt="tableta">
+    <main class="main">
+        <section style="background-color: #f8f4ff;" class="section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md">
+                        <h2 class="header-text text-pink">Apoyo psicológico que se adapta a ti</h2>
+                        <p>
+                            En vital Mind somos un equipo de psicólogos capacitados y
+                            certificados, en donde ofrecemos apoyo personalizado a las mujeres
+                            que día a día se enfrenta a distintas limitantes que nos les
+                            permiten ser su mejor versión.
+                        </p>
+                        <a class="btn btn-comenzar" type="button">Comenzar</a>
+                    </div>
+                    <div class="col-md">
+                        <img class="img-fluid" src="./assets/amigos.png" alt="amigos">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="features-container">
-            <div class="card-feature">
-                <img class="card-feature-img" src="./assets/user.png" alt="">
-                <p class="secondary">
-                    Respaldado por
-                    Profesionales.
-                </p>
+        <section class="section">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md">
+                        <h2 class="header-text text-blue">
+                            Psicólogos profesionales
+                            apalancados por tecnología
+                        </h2>
+                        <p>
+                            Ofrecemos un programa de tratamiento
+                            integral que combiana técnología con
+                            asesoria profesional.
+                            Te damos acceso a un lugar para crear
+                            conexiones y una comunidad segura y sin
+                            prejuicios que promueve el intercambio de
+                            experiencias e ideas, empatía, comprensión y
+                            la esperanza de construir la vida que deseas vivir.
+                        </p>
+                    </div>
+                    <div class="col text-center">
+                        <img class="img-fluid" src="./assets/tablets.png" alt="tableta">
+                    </div>
+                </div>
             </div>
-            <div class="card-feature">
-                <img style="max-width: 110px;" src="./assets/chart.png" alt="">
-                <p class="secondary">
-                    Progreso y Análisis
-                    basado en datos.
-                </p>
-            </div>
-            <div class="card-feature">
-                <img class="card-feature-img" src="./assets/lock.png" alt="">
-                <p class="secondary">
-                    Privacidad
-                    y Seguridad.
-                </p>
+        </section>
+
+        <section class="container section">
+            <div class="row">
+                <div class="col-md">
+                    <div class="card-feature">
+                        <img class="card-feature-img" src="./assets/user.png" alt="">
+                        <p class="secondary">
+                            Respaldado por
+                            Profesionales.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card-feature">
+                        <img style="max-width: 110px; margin-bottom: 20px;" src="./assets/chart.png" alt="">
+                        <p class="secondary">
+                            Progreso y Análisis
+                            basado en datos.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card-feature">
+                        <img class="card-feature-img" src="./assets/lock.png" alt="">
+                        <p class="secondary">
+                            Privacidad
+                            y Seguridad.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -98,7 +124,7 @@
                 <img id="pasosImage" class="img-fluid" src="./assets/step1.png" alt="comienza">
             </div>
             <div class="pasos-text">
-                <h2 class="header-text text-danger">Como funcionan los tratamientos de Vital Mind</h2>
+                <h2 class="header-text text-pink">Como funcionan los tratamientos de Vital Mind</h2>
                 <div class="pasos">
                     <div class="paso">
                         <h3>1. Comienza.</h3>
@@ -130,34 +156,42 @@
         </section>
 
 
-        <section class="precios-container">
-            <div class="precios">
-                <div class="precio-card">
-                    <div class="precio-image" style="background-image: url(./assets/basico.png);"></div>
-                    <h4 class="text-center plan-name">Básico</h4>
-                    <ul class="precio-list">
-                        <li>Psicólogo certificado</li>
-                        <li>Consulta online</li>
-                    </ul>
-                    <div class="precio-precio">$280<span>/consulta</span></div>
-                </div>
-                <div class="precio-card">
-                    <div class="precio-image" style="background-image: url(./assets/estandar.png);"></div>
-                    <h4 class="text-center plan-name">Estandar</h4>
-                    <ul class="precio-list">
-                        <li>Psicólogo certificado</li>
-                        <li>Consulta online</li>
-                        <li>Chat de apoyo</li>
-                    </ul>
-                    <div class="precio-precio">$280<span>/consulta</span></div>
-                </div>
-                <div class="precio-card">
-                    <div class="precio-image" style="background-image: url(./assets/premium.png);"></div>
-                    <h4 class="text-center plan-name">Premium</h4>
-                    <ul class="precio-list">
-                        <li>Consulta online</li>
-                    </ul>
-                    <div class="precio-precio">$280<span>/consulta</span></div>
+        <section class="section" style="background-color: #cc88ff;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="precio-card">
+                            <div class="precio-image" style="background-image: url(./assets/basico.png);"></div>
+                            <h4 class="text-center plan-name">Básico</h4>
+                            <ul class="precio-list">
+                                <li>Psicólogo certificado</li>
+                                <li>Consulta online</li>
+                            </ul>
+                            <div class="precio-precio">$280<span>/consulta</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="precio-card">
+                            <div class="precio-image" style="background-image: url(./assets/estandar.png);"></div>
+                            <h4 class="text-center plan-name">Estandar</h4>
+                            <ul class="precio-list">
+                                <li>Psicólogo certificado</li>
+                                <li>Consulta online</li>
+                                <li>Chat de apoyo</li>
+                            </ul>
+                            <div class="precio-precio">$280<span>/consulta</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="precio-card">
+                            <div class="precio-image" style="background-image: url(./assets/premium.png);"></div>
+                            <h4 class="text-center plan-name">Premium</h4>
+                            <ul class="precio-list">
+                                <li>Consulta online</li>
+                            </ul>
+                            <div class="precio-precio">$280<span>/consulta</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -165,24 +199,30 @@
     </main>
 
     <footer>
-        <div class="footer">
-            <div class="text-center">
-                <img width="240px" src="./assets/logo.svg" alt="vital mind" />
-            </div>
-            <div>
-                <h2>"Estamos contigo para mejorar tu vida"</h2>
-            </div>
-            <div class="nav-list">
-                <a href="">Nosotros</a>
-                <a href="">Conocenos</a>
-                <a href="">Como funciona</a>
-                <a href="">Preguntas frecuentes</a>
-            </div>
-            <div>
-                Redes sociales
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img width="240px" src="./assets/logo.svg" alt="vital mind" />
+                </div>
+                <div class="col">
+                    <h3>"Estamos contigo para mejorar tu vida"</h3>
+                </div>
+                <div class="col">
+                    <div class="nav-list">
+                        <a href="">Nosotros</a>
+                        <a href="">Conocenos</a>
+                        <a href="">Como funciona</a>
+                        <a href="">Preguntas frecuentes</a>
+                    </div>
+                </div>
+                <div class="col">
+                    Redes sociales
+                </div>
             </div>
         </div>
-        <div class="terms">Terminos y condiciones</div>
+        <div class="terms">
+            <a href="#">Terminos y condiciones</a>
+        </div>
     </footer>
 
     <script src="./js/slider.js"></script>

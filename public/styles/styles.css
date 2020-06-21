@@ -3,88 +3,62 @@
   padding: 0;
 }
 
+:root {
+  --main-blue-color: #00c4cc;
+  --main-pink-color: #e83493;
+  --main-purple-color: #4b0ccf;
+}
+
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 19px;
   color: #212121;
 }
 
-h2,
-h3 {
-  margin-bottom: 1rem;
+.main {
+  padding-top: 92px;
 }
 
-p {
-  margin-bottom: 1rem;
+.bg-light {
+  background-color: #fff !important;
 }
 
-button {
-  font-family: "Nunito", sans-serif;
-  border: none;
+.navbar-brand img {
+  width: 100px;
 }
 
-.navbar {
-  position: fixed;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  z-index: 10;
-  background-color: #fff;
-  height: 74px;
-  box-shadow: 0px -4px 3px 2px #000000;
-}
-
-.navbar-nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: row;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  margin-right: 50px;
-}
-
-.nav-link {
-  text-decoration: none;
-  display: block;
-  padding: 0.5rem 1rem;
+.navbar-light .navbar-nav .nav-link {
   font-weight: bold;
   color: #212121;
 }
 
-.comenzar {
-  background: #e83493;
-  color: #fff;
-  border-radius: 50px;
+.text-pink {
+  color: var(--main-pink-color) !important;
 }
 
-.container {
-  width: 100%;
-  position: relative;
-  padding-top: 90px;
+.text-blue {
+  color: var(--main-blue-color) !important;
 }
 
-.button-home {
+.comenzar-link {
+  color: #fff !important;
+  background-color: var(--main-pink-color);
+  border-radius: 60px;
+}
+
+.btn-comenzar {
   border-radius: 30px;
   padding: 10px;
   font-size: 1.3rem;
   font-weight: bold;
   background-color: #e83493;
-  color: #fff;
+  color: #fff !important;
   width: 250px;
   cursor: pointer;
 }
 
-.navbar-brand img {
-  width: 100px;
+.section {
+  padding: 20px 0;
 }
 
 .flex-container {
@@ -104,8 +78,9 @@ button {
 }
 
 .header-text {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  font-weight: bold;
 }
 
 .porque-img {
@@ -123,6 +98,7 @@ button {
 
 .card-feature {
   width: 200px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -134,37 +110,13 @@ button {
 
 .card-feature-img {
   max-width: 80px;
+  margin-bottom: 20px;
 }
 
 .card-feature p {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 0px;
-}
-
-.img-fluid {
-  width: 100%;
-  height: auto;
-}
-
-.pl-2 {
-  padding-left: 1rem;
-}
-
-.primary {
-  color: #00c4cc !important;
-}
-
-.text-danger {
-  color: #e83493 !important;
-}
-
-.secondary {
-  color: #4b0ccf !important;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .pasos-container {
@@ -218,7 +170,7 @@ button {
 }
 
 .precio-card {
-  height: 460px;
+  height: 480px;
   width: 280px;
   border-radius: 30px;
   background-color: #fff;
@@ -246,6 +198,7 @@ button {
   width: 70%;
   margin: auto;
   list-style-type: disc;
+  font-size: 16px;
 }
 
 .plan-name {
@@ -257,7 +210,7 @@ button {
   bottom: 10px;
   width: 100%;
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 0;
   font-size: 3rem;
   font-weight: bold;
@@ -273,11 +226,6 @@ footer {
   color: #fff;
 }
 
-.footer {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-}
-
 .nav-list {
   display: flex;
   flex-direction: column;
@@ -289,26 +237,12 @@ footer {
 }
 
 .terms {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
 #cuestionario {
   position: relative;
-}
-
-.form {
-  max-width: 900px;
-  margin: auto;
-  margin-top: 50px;
-}
-
-.form-group {
-  margin-bottom: 10px;
-}
-
-.form-control label {
-  margin-left: 10px;
 }
 
 .pregunta {
@@ -325,8 +259,26 @@ footer {
   pointer-events: all;
 }
 
-/* @media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-} */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all 0.3s ease-in;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+  position: absolute;
+}

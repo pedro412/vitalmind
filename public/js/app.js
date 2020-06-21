@@ -3,6 +3,7 @@
 var app = new Vue({
   el: '#app',
   data: {
+    currentQuestion: 1,
     message: 'Hello Vue!',
     questions: formArray,
     answers: [],
@@ -16,6 +17,7 @@ var app = new Vue({
         this.answers.find((a) => a.question === name).answer =
           event.target.value;
       }
+      this.currentQuestion += 1;
       console.log(this.answers);
     },
   },
