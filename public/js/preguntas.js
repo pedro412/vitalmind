@@ -59,7 +59,7 @@ const formArray = [
     name: '¿Cuál es tu orientación?',
     type: 'radio',
     model: 'orientacion',
-    answers: ['Gay', 'Bisexual', 'Otro'],
+    answers: ['Hetero', 'Gay', 'Bisexual', 'Prefiero no especificar'],
   },
   {
     name: '¿Cuál es tu  situación sentimental?',
@@ -83,6 +83,6 @@ const formArray = [
     name: '¿Recientemente has experimentado alguno de estos sentimientos?',
     model: 'sentiemientos',
     type: 'checkbox',
-    answers: ['Trsiteza', 'Depresión', 'Ansiedad'],
+    answers: ['Tristeza', 'Depresión', 'Ansiedad'],
   },
 ];
