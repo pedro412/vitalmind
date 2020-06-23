@@ -85,4 +85,41 @@ const formArray = [
     type: 'checkbox',
     answers: ['Tristeza', 'Depresión', 'Ansiedad'],
   },
+  {
+    name:
+      '¿En la últimas semanas has tenido poco interes o ganas de no hacer las cosas?',
+    model: 'interes',
+    type: 'radio',
+    answers: ['No del todo', 'Varios días', 'Casi todos los días'],
+  },
+  {
+    name: '¿Como consideras tu situación económica actual?',
+    model: 'economica',
+    type: 'radio',
+    answers: ['Buena', 'Regular', 'Mala'],
+  },
+  {
+    name: '¿No me gusta la idea de estar sola en mi espacio?',
+    model: 'espacio',
+    type: 'radio',
+    answers: ['No me gusta', 'Poco', 'Me gusta'],
+  },
+  {
+    name: '¿En que estado te encuentras?',
+    model: 'estado',
+    type: 'select',
+    answers: ['Ciudad de México', 'Puebla', 'Queretaro', 'Oaxaca'],
+  },
+  {
+    name: '¿Me cuesta poner limites con mi ambiente?',
+    model: 'ambiente',
+    type: 'radio',
+    answers: ['Mucho', 'Poco', 'Nada'],
+  },
+  {
+    name: '¿Tienes problemas para dormir o durmes mucho?',
+    model: 'dormir',
+    type: 'radio',
+    answers: ['Mucho', 'Poco', 'Nada'],
+  },
 ];
