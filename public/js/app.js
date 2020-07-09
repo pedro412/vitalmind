@@ -78,7 +78,6 @@ var app = new Vue({
       }
     },
     handleSubmit() {
-      console.log('submit!');
       const form = {
         displayName: this.name,
         email: this.email,
