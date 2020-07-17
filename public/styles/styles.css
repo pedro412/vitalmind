@@ -23,7 +23,7 @@ body {
   background-color: #fff !important;
 }
 
-.navbar-brand img {
+.navbar-brand {
   width: 100px;
 }
 
@@ -281,4 +281,36 @@ footer {
   transform: translateX(10px);
   opacity: 0;
   position: absolute;
+}
+
+@media only screen and (max-width: 415px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .btn-comenzar {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .pasos-container {
+    padding: 30px 15px;
+  }
+
+  .pasos-img {
+    display: none;
+  }
+
+  .precio-card {
+    margin: 10px auto;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
