@@ -23,18 +23,19 @@
 
 
     <main class="main">
+        <div id="app">
+            <div class="section">
+                <div class="container mt-2">
+                    <div v-if="!success">
+                        <h2>Ayudanos a encontrar el mejor psicológo especial para ti</h2>
+                        <p>Porfavor responde este breve cuestionario privado y anonimo para conocer como te podemos
+                            ayudar a
+                            mejorar
+                            tu vida</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
 
-        <div class="section">
-            <div class="container mt-2">
-                <div>
-                    <h2>Ayudanos a encontrar el mejor psicológo especial para ti</h2>
-                    <p>Porfavor responde este breve cuestionario privado y anonimo para conocer como te podemos ayudar a
-                        mejorar
-                        tu vida</p>
-                </div>
-                <div class="row">
-                    <div class="col-md">
-                        <div id="app">
                             <div v-if="success">
                                 <h2>Gracias! 🎉</h2>
                                 <p>Pronto nos pondremos en contacto</p>
@@ -47,10 +48,10 @@
                                             <h3 for="">{{index + 1}} {{question.name}}</h3>
                                             <div v-if="question.type === 'radio'" v-for="answer in question.answers"
                                                 class="form-check">
-                                                <input v-model="question.model" class="form-check-input" type="radio"
+                                                <input :v-model="question.model" class="form-check-input" type="radio"
                                                     :name="answer + '_' + question.name"
                                                     :id="answer + '_' + question.name" :value="answer"
-                                                    @change="onChange($event, question.name)">
+                                                    @change="onChange($event, question.model)">
                                                 <label class="form-check-label" :for="answer + '_' + question.name">
                                                     {{answer}}
                                                 </label>
@@ -62,7 +63,8 @@
                                         <div v-show="currentQuestion === index + 1">
                                             <div v-if="question.type === 'select'" class="form-group">
                                                 <label :for="question.name">Selecciona: </label>
-                                                <select @change="onChange($event, question.name)" class="form-control"
+                                                <select :v-model="question.model"
+                                                    @change="onChange($event, question.model)" class="form-control"
                                                     :id="question.name">
                                                     <option v-for="answer in question.answers">{{answer}}</option>
                                                 </select>
@@ -74,9 +76,9 @@
                                         <div v-show="currentQuestion === index + 1">
                                             <div v-if="question.type === 'checkbox'" v-for="answer in question.answers"
                                                 class="form-check">
-                                                <input class="form-check-input" type="checkbox" :value="answer"
-                                                    :id="answer"
-                                                    @change="onChange($event, question.name, question.type)">
+                                                <input :v-model="question.model" class="form-check-input"
+                                                    type="checkbox" :value="answer" :id="answer"
+                                                    @change="onChange($event, question.model, question.type)">
                                                 <label class="form-check-label" :for="answer">
                                                     {{answer}}
                                                 </label>
@@ -128,17 +130,17 @@
                                 </div>
                             </form>
                         </div>
+                        <div class="col-md">
+                            <img class="img-fluid" src="./assets/mujer.png" alt="mujer">
+                        </div>
                     </div>
-                    <div class="col-md">
-                        <img class="img-fluid" src="./assets/mujer.png" alt="mujer">
-                    </div>
+
                 </div>
             </div>
         </div>
     </main>
 
-    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script>
+    <script src="./js/fetch-polyfill.js"></script>
     <script src="./js/preguntas.js"></script>
     <script src="./js/app.js"></script>
 
