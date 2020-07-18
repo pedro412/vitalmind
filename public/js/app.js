@@ -9,6 +9,7 @@ var app = new Vue({
     questions: formArray,
     answers: [],
     isChecked: false,
+    isLoading: false,
     name: '',
     email: '',
     phone: '',
@@ -85,6 +86,7 @@ var app = new Vue({
     },
     handleSubmit: function handleSubmit() {
       var _this = this;
+      this.isLoading = true;
 
       var form = {
         nombre: this.name,
@@ -119,6 +121,7 @@ var app = new Vue({
         .then(function (resp) {
           console.log(resp);
           _this.success = true;
+          _this.isLoading = false;
         });
     },
   },
