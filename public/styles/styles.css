@@ -284,7 +284,6 @@ footer {
 }
 
 @media only screen and (max-width: 415px) {
-
   body {
     overflow-x: hidden;
   }
@@ -307,6 +306,7 @@ footer {
   }
 
   .precio-card {
+    height: 570px;
     margin: 10px auto;
   }
 
